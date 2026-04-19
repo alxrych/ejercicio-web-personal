@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Mi Sitio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="biografia.html">Biografía</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="page-title">Mis proyectos</h1>
+    <section class="portfolio-grid">
+      <!-- Imagen -->
+      <article class="portfolio-item">
+        <img src="https://picsum.photos/id/26/400/300" alt="Proyecto de diseño web">
+        <h3>Diseño UI para startup</h3>
+        <p>Interfaz moderna y accesible.</p>
+      </article>
+      <!-- Video -->
+      <article class="portfolio-item">
+        <video controls poster="https://picsum.photos/id/20/400/300">
+          <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+        <h3>Showreel animado</h3>
+        <p>Pequeña muestra de motion graphics.</p>
+      </article>
+      <!-- Audio -->
+      <article class="portfolio-item">
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          Tu navegador no soporta audio.
+        </audio>
+        <h3>Podcast: diseño y tecnología</h3>
+        <p>Episodio sobre tendencias UX.</p>
+      </article>
+      <!-- Otra imagen -->
+      <article class="portfolio-item">
+        <img src="https://picsum.photos/id/91/400/300" alt="Fotografía de producto">
+        <h3>Catálogo interactivo</h3>
+        <p>Tienda online con microinteracciones.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

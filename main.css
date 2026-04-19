@@ -1,0 +1,280 @@
+/* ========== RESET Y BASE (Mobile First) ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;  /* Tipografía personalizada */
+  background-color: #fefefe;
+  color: #1e1e2a;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+/* ========== NAVEGACIÓN ========== */
+header {
+  background-color: #1e1e2a;
+  padding: 0.8rem 1rem;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;   /* Mobile: columna */
+  gap: 0.8rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+}
+
+/* Pseudoclase hover y foco */
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+  background-color: #ff6b6b;
+  color: #1e1e2a;
+  outline: none;
+}
+
+.nav-menu li a.active {
+  background-color: #ff6b6b;
+  color: #1e1e2a;
+}
+
+/* ========== TÍTULOS ========== */
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ========== BOTONES ========== */
+.btn {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: #1e1e2a;
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #ff4757;
+  transform: scale(1.02);
+  outline: none;
+}
+
+/* ========== HOME (index) ========== */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 24px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+}
+
+.intro {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+/* ========== BIOGRAFÍA ========== */
+.bio-container {
+  display: flex;
+  flex-direction: column;  /* Mobile: columna */
+  gap: 2rem;
+  align-items: center;
+}
+
+.bio-texto {
+  flex: 1;
+}
+
+.bio-imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.bio-imagen img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 32px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.bio-imagen img:hover {
+  transform: scale(1.02);
+}
+
+/* ========== PORTFOLIO (grid con flex) ========== */
+.portfolio-grid {
+  display: flex;
+  flex-direction: column;  /* Mobile: columna */
+  gap: 2rem;
+}
+
+.portfolio-item {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 1rem;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 28px rgba(0,0,0,0.12);
+}
+
+.portfolio-item img,
+.portfolio-item video {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.portfolio-item audio {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* ========== FORMULARIO (contacto) ========== */
+.contacto-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+input, textarea {
+  font-family: inherit;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  font-size: 1rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+/* Pseudoclase focus en campos */
+input:focus, textarea:focus {
+  border-color: #ff6b6b;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,107,107,0.2);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e1e2a;
+  color: #ddd;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ========== MEDIA QUERIES (Tablet y Laptop) ========== */
+/* Tablet */
+@media (min-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .bio-container {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .portfolio-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .portfolio-item {
+    flex: 1 1 calc(50% - 2rem);
+    min-width: 280px;
+  }
+}
+
+/* Laptop / Desktop */
+@media (min-width: 1024px) {
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .portfolio-item {
+    flex: 1 1 calc(33.333% - 2rem);
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .bio-container {
+    gap: 4rem;
+  }
+}
